@@ -1,12 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import Poll from './components/Poll';
 
 function App() {
   return (
-    <div className="App">
-      <div>Hello world!</div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route exact path='/polls'>
+          <Poll />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
