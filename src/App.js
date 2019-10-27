@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Home from './components/Home';
 import Poll from './components/Poll';
+import PollNew from './components/PollNew';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Home />
+        </Route>
+        <Route exact path='/new'>
+          <PollNew />
         </Route>
         <Route exact path='/polls'>
           <Poll />
